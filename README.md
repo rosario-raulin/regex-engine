@@ -22,6 +22,10 @@ maps some regex R to a set of words. That function is defined like this:
 3.2 R* is then set to R* (the old one) ∪ { r | R* }
 4. f((R1|R2)) = f(R1) ∪ f(R2)
 5. f(R1R2) = { xy | x ∈ f(R1) and y ∈ f(R2) }
+6. f(.) = U
+
+The last definition mean that the special character . is reserver for meaning
+any character from our alphabet/universe U.
 
 regex R matches some text S with S ∈ f(R).
 
