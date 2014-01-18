@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1AC5C460188AC842004C08C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5C45F188AC842004C08C7 /* main.cpp */; };
 		1AC5C462188AC842004C08C7 /* RegularExpressions.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1AC5C461188AC842004C08C7 /* RegularExpressions.1 */; };
+		1AC5C46A188AC8C1004C08C7 /* Digraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5C468188AC8C1004C08C7 /* Digraph.cpp */; };
+		1AC5C470188AEF2A004C08C7 /* RegularExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5C46E188AEF2A004C08C7 /* RegularExpression.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,11 @@
 		1AC5C45C188AC842004C08C7 /* RegularExpressions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RegularExpressions; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC5C45F188AC842004C08C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1AC5C461188AC842004C08C7 /* RegularExpressions.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RegularExpressions.1; sourceTree = "<group>"; };
+		1AC5C468188AC8C1004C08C7 /* Digraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Digraph.cpp; sourceTree = "<group>"; };
+		1AC5C469188AC8C1004C08C7 /* Digraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Digraph.h; sourceTree = "<group>"; };
+		1AC5C46C188ACABE004C08C7 /* DirectedDFS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectedDFS.h; sourceTree = "<group>"; };
+		1AC5C46E188AEF2A004C08C7 /* RegularExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegularExpression.cpp; sourceTree = "<group>"; };
+		1AC5C46F188AEF2A004C08C7 /* RegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpression.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,11 @@
 			isa = PBXGroup;
 			children = (
 				1AC5C45F188AC842004C08C7 /* main.cpp */,
+				1AC5C46E188AEF2A004C08C7 /* RegularExpression.cpp */,
+				1AC5C46F188AEF2A004C08C7 /* RegularExpression.h */,
+				1AC5C468188AC8C1004C08C7 /* Digraph.cpp */,
+				1AC5C46C188ACABE004C08C7 /* DirectedDFS.h */,
+				1AC5C469188AC8C1004C08C7 /* Digraph.h */,
 				1AC5C461188AC842004C08C7 /* RegularExpressions.1 */,
 			);
 			path = RegularExpressions;
@@ -118,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AC5C460188AC842004C08C7 /* main.cpp in Sources */,
+				1AC5C470188AEF2A004C08C7 /* RegularExpression.cpp in Sources */,
+				1AC5C46A188AC8C1004C08C7 /* Digraph.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
