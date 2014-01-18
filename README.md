@@ -20,8 +20,8 @@ maps some regex R to a set of words. That function is defined like this:
 1. f("") = {}
 2. f(X) = {X}
 3. f(R*) is the set of words formed by appending some strings r1 and r2 from R*. Think of it as this kind of recursive definition:
-3.1 R* is initially just {r | r ∈ R}.
-3.2 R* is then set to R* (the old one) ∪ { r | R* }
+	1. R* is initially just {r | r ∈ R}.
+	2. R* is then set to R* (the old one) ∪ { r | R* }
 4. f((R1|R2)) = f(R1) ∪ f(R2)
 5. f(R1R2) = { xy | x ∈ f(R1) and y ∈ f(R2) }
 6. f(.) = U
@@ -30,4 +30,3 @@ The last definition mean that the special character . is reserver for meaning
 any character from our alphabet/universe U.
 
 regex R matches some text S with S ∈ f(R).
-
