@@ -5,28 +5,24 @@ This project is an implementation of the simple regex engine as described by
 Robert Sedgewick, et al. in "Algorithms - Fourth Edition"
 (2011, Addison Wesley). It follows the following definition of a regex:
 
-A regex is a string that is
+Let A be a (finite) alphabet of characters.
 
-1. empty (denoted by "") or
-2. some character X or
-3. R* where R is some regex or
-4. (R1|R2) where R1 and R2 are some regex
-5. R1R2 where R1 and R2 are some regex
-6. built by applying 1, 2, 3, 4 and 5 a finite amount of times.
+0. . is a regex.
+1. The empty string "" is a regex.
+2. Some character X from our alphabet A is a regex.
+3. Let R be a regex. Then R* is a regex.
+4. Let R1 and R2 be regex. Then R1R2 is a regex.
+5. Let R1 and R2 be regex. Then (R1|R2) is a regex.
+6. R is a regex if and only if it can be build using the rules 0 to 5
+for a finite amount of times.
 
-A regex is said to match some other string, i. e. there is a function f that
-maps some regex R to a set of words. That function is defined like this:
+The following function f maps a regex to a set of words.
 
-1. f("") = {}
-2. f(X) = {X}
-3. f(R*) is the set of words formed by appending some strings r1 and r2 from R*. Think of it as this kind of recursive definition:
-	1. R* is initially just {r | r ∈ R}.
-	2. R* is then set to R* (the old one) ∪ { r | R* }
-4. f((R1|R2)) = f(R1) ∪ f(R2)
-5. f(R1R2) = { xy | x ∈ f(R1) and y ∈ f(R2) }
-6. f(.) = U
+0. f(".") = A
+1. f("") = { e } where e is the empty word.
+2. Let x ∈ A. Then f("x") = { x }.
+3. Let R1 and R2 be regex. Then f("(R1|R2)") = f(R1) ∪ f(R2)
+4. Let R1 and R2 be regex. Then f("R1R2") = { xy | x ∈ f(R1) and y ∈ f(R2) }
+5. Let R be a regex. Then R* = Union of all sets { r^n | r ∈ R } for any n >= 0.
 
-The last definition mean that the special character . is reserver for meaning
-any character from our alphabet/universe U.
-
-regex R matches some text S with S ∈ f(R).
+regex R is said to match some text S iff S ∈ f(R).
